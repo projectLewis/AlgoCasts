@@ -19,6 +19,19 @@
 //      ' ##### '
 //      '#######'
 
-function pyramid(n) {}
+function pyramid(n) {
+  let count = n;
+  let levels = "";
+
+  while (count > 0) {
+    let spaces = " ".repeat(count - 1);
+    if (count === n) {
+      console.log(`${spaces}${(levels += "#")}${spaces}`);
+    } else {
+      console.log(`${spaces}${(levels += "##")}${spaces}`);
+    }
+    count -= 1;
+  }
+}
 
 module.exports = pyramid;
